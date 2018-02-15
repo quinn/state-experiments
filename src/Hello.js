@@ -1,3 +1,12 @@
-import React from 'react';
+import React from 'react'
+import store from './store'
+import wrap  from './Wrapper'
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+const Hello = ({ name }) =>
+  <h1>Hello {name}!</h1>
+
+var result = wrap(Hello, {
+  name: 'name',
+})
+
+export default result
