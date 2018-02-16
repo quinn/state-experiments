@@ -7,7 +7,8 @@ const wrap = (WrappedComponent, propertyMap) =>
       super(props)
       this.state = {}
     }
-    componentWillMount() {
+
+    componentWillMount () {
       this.cancels = Object.keys(propertyMap).map(property =>
         store.addListener(property, value =>
           this.setState(propertyMap[property], value)
